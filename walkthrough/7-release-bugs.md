@@ -20,22 +20,22 @@ Fetch the latest from origin and create a local tracking branch for the release:
 $ git fetch origin
 # fetch latest from origin
 
-$ git checkout release/1.1
+$ git checkout release/1.1.0
 # checkout the release branch
-Branch hotfix/YYYY-MM-DD set up to track remote branch release/1.1 from origin.
+Branch hotfix/YYYY-MM-DD set up to track remote branch release/1.1.0 from origin.
 Switched to a new branch 'hotfix/YYYY-MM-DD'
 ```
 
 Choose two developers to address each issue.
 
 - Developer 1:
-    1. Create a feature branch off of `release/1.1` named `last-months-favorites`.
+    1. Create a feature branch off of `release/1.1.0` named `last-months-favorites`.
     2. Commit the following changes to the feature branch:
         1. Create a section in [`/app/index.md`](/app/index.md) titled "Last Month's Favorites".
         2. Copy the text that was published last release and paste under "Last Month's Favorites". Be sure not to include John Lennon.
 
 - Developer 2:
-    1. Create a feature branch off of `release/1.1` named `remove-john-lennon`.
+    1. Create a feature branch off of `release/1.1.0` named `remove-john-lennon`.
     2. Commit the following changes to the feature branch:
         1. Delete the file `/app/writer/john-lennon.md`.
         2. Remove references to John Lennon from [`/app/index.md`](/app/index.md)
@@ -54,7 +54,7 @@ Other team members may also choose an issue and make the changes themselves loca
 
 __Developers__
 
-The two developers from the last step should now publish their feature branches to GitHub and open up Pull Requests against the `release/1.1` branch in the source repository:
+The two developers from the last step should now publish their feature branches to GitHub and open up Pull Requests against the `release/1.1.0` branch in the source repository:
 ```sh
 $ git push -u origin HEAD
 ```
@@ -71,7 +71,7 @@ $ git push -u origin HEAD
 
 __Maintainers__
 
-Review the developer Pull Requests and merge them into `release/1.1`.
+Review the developer Pull Requests and merge them into `release/1.1.0`.
 
 ## Next
 
