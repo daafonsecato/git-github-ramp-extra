@@ -69,9 +69,7 @@ $ git branch -r --list teammate/*
 
 Checkout a tracking branch:
 ```sh
-$ git checkout feature/arctic_monkeys
-Branch teammate-feature-branch set up to track remote branch feature/arctic_monkeys from teammate.
-Switched to a new branch 'teammate-feature-branch'
+$ git flow feature pull arctic_monkeys
 ```
 
 :bulb: As long as only one of your remotes has a branch called feature/arctic_monkeys, it knows to create a local tracking branch.

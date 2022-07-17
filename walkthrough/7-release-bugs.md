@@ -17,10 +17,7 @@ __Developers__
 Fetch the latest from origin and create a local tracking branch for the release:
 
 ```sh
-$ git fetch origin
-# fetch latest from origin
-
-$ git checkout release/1.1.0
+$ git flow release pull v1.1.0
 # checkout the release branch
 Branch hotfix/YYYY-MM-DD set up to track remote branch release/1.1.0 from origin.
 Switched to a new branch 'hotfix/YYYY-MM-DD'
@@ -56,7 +53,7 @@ __Developers__
 
 The two developers from the last step should now publish their feature branches to GitHub and open up Pull Requests against the `release/1.1.0` branch in the source repository:
 ```sh
-$ git push -u origin HEAD
+$ git flow release publish v1.1.0
 ```
 
 ---

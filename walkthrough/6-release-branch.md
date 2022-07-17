@@ -21,7 +21,7 @@ $ git pull
 
 Create a new branch off of `develop` named `release/1.1.0`:
 ```sh
-$ git checkout -b release/1.1.0
+$ git flow release start v1.1.0
 ```
 
 Bump the version number to 1.1.0:
@@ -44,7 +44,7 @@ __Maintainers__
 
 Choose a maintainer to publish the release branch to the source repository:
 ```sh
-$ git push -u origin HEAD
+$ git flow release publish v1.1.0
 ```
 
 ## Next

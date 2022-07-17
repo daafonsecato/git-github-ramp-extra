@@ -14,12 +14,12 @@ Follow along with the activities below to walk through the process of creating a
 
 __Maintainers__
 
-Create a branch off of `main` named `hotfix/YYYY-MM-DD` ex.  `hotfix/2022-06-26`:
+Create a branch off of `main` named `hotfix/1.0.1`:
 ```sh
 $ git checkout main
 # switch to main branch
 
-$ git checkout -b hotfix/YYYY-MM-DD
+$ git flow hotfix start 1.0.1
 # create & switch to hotfix branch
 ```
 
@@ -54,7 +54,7 @@ __Maintainers__
 Choose a maintainer to publish the hotfix branch. This maintainer should push the branch to origin:
 
 ```sh
-$ git push -u origin HEAD
+$ git flow hotfix publish 1.0.1
 ```
 
 ---
@@ -72,22 +72,10 @@ __Developers__
 Fetch the latest from origin and create a local tracking branch for the hotfix:
 
 ```sh
-$ git fetch origin
-# fetch latest from origin
-
-$ git checkout hotfix/YYYY-MM-DD
-# checkout the hotfix branch
-Branch hotfix/YYYY-MM-DD set up to track remote branch hotfix/YYYY-MM-DD from origin.
-Switched to a new branch 'hotfix/YYYY-MM-DD'
+$ git flow hotfix pull 1.0.1
 ```
 
-:bulb: As long as only one of your remotes has a branch called hotfix/YYYY-MM-DD, it knows to create a local tracking branch.
-
-
-Create a feature branch named `remove-emails` off of the hotfix branch.
-```sh
-$ git checkout -b remove-emails
-```
+:bulb: As long as only one of your remotes has a branch called hotfix/1.0.1, it knows to create a local tracking branch.
 
 After removing the email addresses from the main page ([/app/index.md](/app/index.md)), stage and commit the change:
 ```sh
@@ -112,7 +100,7 @@ Choose a developer to publish the fixup branch and create a Pull Request against
 
 Publish the branch:
 ```sh
-$ git push -u origin HEAD
+$ git flow hotfix publish 1.0.1
 ```
 
 Navigate to your GitHub fork and open the pull request, making sure to request to merge changes into the `hotfix/YYYY-MM-DD` branch.
@@ -143,22 +131,7 @@ Choose a maintainer to accept the new pull request to merge the hotfix branch in
 
 Next we will work to get the hotfix merged back down into `develop`, so switch to the hotfix branch and pull down all the latest changes:
 ```sh
-$ git checkout hotfix/YYYY-MM-DD
-# switch to hotfix branch
-
-$ git pull
-# pull latest changes
-```
-
-:bulb: Running git pull on a tracking branch will automatically fetch and merge changes.
-
-Merge hotfix into develop, creating a new merge commit (via `--no-ff`):
-```sh
-$ git checkout develop
-
-$ git pull
-
-$ git merge --no-ff hotfix/YYYY-MM-DD
+$ git flow hotfix finish 1.0.1
 ```
 
 :bulb: Always make sure that `develop` is up to date before merging. There may be some merge conflicts that will need to be addressed at this point.

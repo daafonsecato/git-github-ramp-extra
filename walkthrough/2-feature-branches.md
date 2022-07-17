@@ -35,11 +35,6 @@ $ git branch
 
 :bulb: Feature branches will be named such that someone else can look at what branches are in progress and get a rough idea of what work is being done on each branch.
 
-:bulb: You can create a branch without immediately checking out the branch via the `git branch` command:
-```sh
-$ git branch feature/arctic_monkeys
-```
-
 ---
 
 :cop: :raised_hand: - Please wait until everyone has caught up.

@@ -8,47 +8,22 @@ It is the last day of the month and no more requests have come in from the, time
 
 ## :running: Activities
 
-### 1 - Merge Release Branch into `main`
+### 1 - Merge Release Branch into `main` and `develop`
 
 __Maintainers__
 
 Choose a maintainer to merge `release/1.1.0` into `main`.
 
 ```sh
-$ git checkout release/1.1.0
+$ git flow release pull v1.1.0
 
-$ git pull
+$ git flow release finish v1.1.0
 
 $ git checkout main
 
-$ git pull
-
-$ git merge --no-ff release/1.1.0
-
 $ git push
-```
-
----
-
-:cop: :raised_hand: - Please wait until everyone has caught up.
-
-:construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction:
-
----
-
-### 2 - Merge Release Branch into `develop`
-
-__Maintainers__
-
-Next we will work to get changes made to the release merged back down into `develop`, so switch to the release branch and pull down all the latest changes:
-```sh
-$ git checkout release/1.1.0
 
 $ git checkout develop
-
-$ git merge --no-ff release/1.1.0
-
-$ git push
 ```
 
 :bulb: Always make sure that `develop` is up to date before merging. There may be some merge conflicts that will need to be addressed at this point.
