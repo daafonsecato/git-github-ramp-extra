@@ -184,6 +184,38 @@ $ git branch -vv
 * develop 3e03a92 [origin/develop] Create example app
   main  3e03a92 [origin/main] Create example app
 ```
+---
+
+:cop: :raised_hand: - Please wait until everyone has caught up.
+
+:construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction:
+
+---
+
+### 5 - Configure Git Flow CLI
+
+__All Team Members__
+
+First install the git flow app as explained in this [site](http://danielkummer.github.io/git-flow-cheatsheet/#setup)
+
+Initialize the git flow configure for this repo
+```sh
+$ git flow init
+Which branch should be used for bringing forth production releases?
+   - main
+Branch name for production releases: [main]
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [/mnt/c/Users/dafonseca/OneDrive - ENDAVA/Documents/Intership/Git/Previous/gitflow_practice/flow-pr-test/.git/hooks]
+
+```
 
 You should now be ready to move on to the rest of the walkthrough. If you'd like to see the repository you've created on your local machine in GitHub desktop, you can add a repository by choosing a local path.
 
@@ -193,7 +225,7 @@ You should now be ready to move on to the rest of the walkthrough. If you'd like
 
 :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction: :construction:
 
----
+
 
 ## Next
 
